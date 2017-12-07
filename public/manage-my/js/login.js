@@ -1,0 +1,13 @@
+$(function(){
+    $('button[type=submit]').click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url:'/employee/employeeLogin',
+            data:$('form').serialize(),
+            type:'post',
+            success:function(data){
+                console.log(data)
+            }   
+        })
+    })
+})
