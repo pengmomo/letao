@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- bs的css -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-    <h2>你来了。我走了</h2>
+    <!-- 边栏 -->
+    <div class="lt-aside">
+        <div class="header">
+            <h2>
+                <a href="./index.html">ITCAST</a>
+            </h2>
+        </div>
+        <div class="user">
+            <img src="./images/default.png" alt="">
+            <span>超级管理员</span>
+        </div>
+        <div class="content">
+            <ul>
+                <li class="active">
+                    <a href="javascript:void(0);">
+                        <i class="glyphicon glyphicon-user"></i> 用户管理</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <i class="glyphicon glyphicon-list"></i> 分类管理</a>
+                    <ol>
+                        <li>
+                            <a href="javascript:void(0);">一级分类</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">一级分类</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">
+                        <i class="glyphicon glyphicon-tags"></i> 商品管理</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="lt-main">
+        <div class="header">
+            <a class="glyphicon glyphicon-align-justify pull-left" href="javascript:void(0);"></a>
+            <a class="glyphicon glyphicon-log-out pull-right" href="javascript:void(0);"></a>
+        </div>
+        <div class="content clearfix">
+            <!-- 导航 -->
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">管理系统</a>
+                </li>
+                <li class="active">首页</li>
+            </ol>
+            <!-- 图表 -->
+            <div id="main-left" class="pull-left" style="width: 520px;height:400px;"></div>
+            <div id="main-right" class="pull-right" style="width: 520px;height:400px;"></div>
+        </div>
+    </div>
 </body>
+
 </html>
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/echarts/echarts.min.js"></script>
+<script src="./js/index.js"></script>
