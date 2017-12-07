@@ -56,6 +56,7 @@ $(function () {
     }).on('success.form.bv', function (e) {
         e.preventDefault();
         // console.log('dianji')
+        //开启进度条
         NProgress.start();
         $.ajax({
             url: '/employee/employeeLogin',
@@ -75,6 +76,7 @@ $(function () {
                         validator.updateStatus('password', 'INVALID', 'callback');
                     }
                 }
+                //关闭进度条
                 setTimeout(function(){
                     NProgress.done();
                 },1000)
