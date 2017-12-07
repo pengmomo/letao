@@ -55,7 +55,8 @@ $(function () {
         }
     }).on('success.form.bv', function (e) {
         e.preventDefault();
-        console.log('dianji')
+        // console.log('dianji')
+        NProgress.start();
         $.ajax({
             url: '/employee/employeeLogin',
             data: $('form').serialize(),
@@ -74,6 +75,9 @@ $(function () {
                         validator.updateStatus('password', 'INVALID', 'callback');
                     }
                 }
+                setTimeout(function(){
+                    NProgress.done();
+                },1000)
             }
         })
     })
