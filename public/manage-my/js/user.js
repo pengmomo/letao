@@ -30,4 +30,27 @@ $(function () {
 
     getData()
 
+    // 页面的启用禁用
+    $('tbody').on('click','button',function(){
+       var id = $(this).parent().attr('data-id');
+       var isDelete = null;
+        if($(this).html()=='启用'){
+            isDelete = 0
+        }else{
+            isDelete = 1
+        }
+        $.ajax({
+            url:'/user/updateUser',
+            type:'post',
+            data:{
+                id:id,
+                isDelete:isDelete
+            },
+            success:function(data){
+                console.log(data);
+                getData();
+            }
+        })
+    })
+
 })

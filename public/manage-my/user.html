@@ -133,7 +133,7 @@
         <td>
             {{if $value.isDelete==0}} 正常 {{else}} 已禁用 {{/if}}
         </td>
-        <td>
+        <td data-id={{$value.id}}>
             {{if $value.isDelete==0}}
             <button class="btn btn-sm btn-danger">禁用</button>
             {{else}}
