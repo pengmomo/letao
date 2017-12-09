@@ -1,0 +1,13 @@
+$(function(){
+    $.ajax({
+        url:'/user/queryUser',
+        data:{
+            page:1,
+            pageSize:5,
+        },
+        success:function(data){
+            console.log(data);
+            $('tbody').html(template('userTmp',data));
+        }
+    })
+})
