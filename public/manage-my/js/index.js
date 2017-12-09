@@ -24,42 +24,71 @@ $(function () {
 
     var myChart2 = echarts.init(document.getElementById('main-right'));
     option2 = {
-        title : {
+        title: {
             text: '热门品牌销售',
             subtext: '2017年6月',
-            x:'center'
+            x: 'center'
         },
-        tooltip : {
+        tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['耐克','阿迪','百伦','安踏','李宁']
+            data: ['耐克', '阿迪', '百伦', '安踏', '李宁']
         },
-        series : [
-            {
-                name: '访问来源',
-                type: 'pie',
-                radius : '55%',
-                center: ['50%', '60%'],
-                data:[
-                    {value:335, name:'耐克'},
-                    {value:310, name:'阿迪'},
-                    {value:234, name:'百伦'},
-                    {value:135, name:'安踏'},
-                    {value:1548, name:'李宁'}
-                ],
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            radius: '55%',
+            center: ['50%', '60%'],
+            data: [{
+                    value: 335,
+                    name: '耐克'
+                },
+                {
+                    value: 310,
+                    name: '阿迪'
+                },
+                {
+                    value: 234,
+                    name: '百伦'
+                },
+                {
+                    value: 135,
+                    name: '安踏'
+                },
+                {
+                    value: 1548,
+                    name: '李宁'
+                }
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
                 }
             }
-        ]
+        }]
     };
     myChart2.setOption(option2);
+
+    // 点击收起左边
+    $('.lt-main .header a.glyphicon-align-justify').click(function(){
+        $('.lt-aside').toggle();
+        $('.lt-main').toggleClass('fullScreen');
+    })
+
+    // 点击弹出模态框
+    $('.lt-main .header a.glyphicon-log-out').click(function(){
+        $('.modal-sure').modal('show')
+    })
+
+    // 点击确定退出系统调回登陆页面
+    $('.modal-sure button.btn-primary').click(function(){
+        $('.modal-sure').modal('hide');
+        window.location.href='./login.html'
+    })
 })

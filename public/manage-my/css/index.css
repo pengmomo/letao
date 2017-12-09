@@ -79,7 +79,10 @@ body {
 .lt-main{
     height: 100%;
     /* background-color: skyblue; */
-    margin-left: 180px;
+    padding-left: 180px;
+}
+.lt-main.fullScreen{
+    padding-left: 0px;
 }
 .lt-main .header{
     height: 50px;
