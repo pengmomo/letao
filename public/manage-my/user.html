@@ -86,6 +86,7 @@
                     </tr>
                 </tbody>
             </table>
+            <ul id="pagintor"></ul>
         </div>
     </div>
 
@@ -119,12 +120,14 @@
 </html>
 <script src="./lib/jquery/jquery.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="./lib/echarts/echarts.min.js"></script>
 <script src="./lib/artTemplate/template.js"></script>
 <script type="text/html" id="userTmp">
     {{each rows}}
     <tr>
-        <td scope="row">{{$index+1}}</td>
+        <!-- (页码-1)*页容量+1+index -->
+        <td scope="row">{{(page-1)*size+$index+1}}</td>
         <td>{{$value.username}}</td>
         <td>{{$value.mobile}}</td>
         <td>
