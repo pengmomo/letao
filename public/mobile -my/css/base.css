@@ -1,0 +1,69 @@
+html,body{
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+.lt_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* 头部 */
+.lt_header{
+    height: 45px;
+    background-color: #006699;
+    justify-content: space-between;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lt_header h4{
+    color: white;
+    font-weight: normal;
+}
+.lt_header a{
+    color: white;
+}
+/* 内容  */
+.lt_content{
+    flex: 1;
+
+}
+/* 底部 */
+.lt_footer{
+    height: 55px;
+    background-color: #006699;
+    justify-content: space-between;
+}
+
+.lt_footer ul {
+    display: flex;
+    width: 100%;
+}
+.lt_footer ul li{
+    width: 25%;
+    text-align: center;
+    padding-top: 10px;
+}
+.lt_footer ul li a{
+    display: block;
+    width: 100%;
+    color: white;
+}
+.lt_footer ul li a p{
+    color: white;
+}
+.lt_footer li.active a{
+    color:orange;
+}
+.lt_footer li.active p{
+    color:orange;
+}
