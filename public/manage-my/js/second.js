@@ -36,28 +36,90 @@ $(function () {
         done: function (e, data) {
             console.log(data.result.picAddr);
             $('form img').attr('src', data.result.picAddr)
+            $('input[name=brandLogo]').val(data.result.picAddr);
+            $("form").data('bootstrapValidator').updateStatus('brandLogo', 'VALID')
         }
     });
 
     // 页面打开，获取分类数据
     $.ajax({
-        url:'/category/queryTopCategoryPaging',
-        data:{
-            page:1,
-            pageSize:200
+        url: '/category/queryTopCategoryPaging',
+        data: {
+            page: 1,
+            pageSize: 200
         },
-        success:function(data){
+        success: function (data) {
             console.log(data);
             $('.dropdown-menu').html('');
-            $.each(data.rows,function(i,n){
-                var $li = $("<li><a href='javascript:void(0);'>"+n.categoryName+"</a></li>");
-                $('.dropdown-menu').append($li)
+            $.each(data.rows, function (i, n) {
+                var $li = $("<li><a data-id='" + n.id + "' href='javascript:void(0);'>" + n.categoryName + "</a></li>");
+                $('.dropdown-menu').append($li);
             })
         }
     })
 
     // ul点击事件
-    $('.dropdown-menu').on('click','li a',function(){
+    $('.dropdown-menu').on('click', 'li a', function () {
         $('.select').html($(this).html())
+        $('input[name=categoryId]').val($(this).attr('data-id'));
+        $("form").data('bootstrapValidator').updateStatus('categoryId', 'VALID')
     })
+
+    // 表单校验
+    $('form').bootstrapValidator({
+        //1. 指定不校验的类型，默认为[':disabled', ':hidden', ':not(:visible)'],可以不设置
+        excluded: [':disabled'],
+
+        //2. 指定校验时的图标显示，默认是bootstrap风格
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        //3. 指定校验字段
+        fields: {
+            //校验用户名，对应name表单的name属性
+            categoryId: {
+                validators: {
+                    //不能为空
+                    notEmpty: {
+                        message: '分类不能为空'
+                    }
+                }
+            },
+            brandName: {
+                validators: {
+                    //不能为空
+                    notEmpty: {
+                        message: '分类不能为空'
+                    }
+                }
+            },
+            brandLogo: {
+                validators: {
+                    //不能为空
+                    notEmpty: {
+                        message: '图片不能为空'
+                    }
+                }
+            },
+        }
+    }).on('success.form.bv', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url:'/category/addSecondCategory',
+            data:$('form').serialize(),
+            type:'post',
+            success:function(data){
+                console.log(data);
+                getData();
+                $('.modal-add').modal('hide');
+                $("form").data('bootstrapValidator').resetForm()
+                $("form input").val('');
+                $("form img").attr('src','./images/none.png');
+                $('.select').html('请选择');
+            }
+        })
+    });
 })
