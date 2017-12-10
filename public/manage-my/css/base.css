@@ -123,3 +123,11 @@ body {
     padding: 30px 20px;
 }
 /* 内容样式 */
+
+/* 二级分类上传图片 */
+#fileUpload{
+    position: absolute;
+    width: 82px;
+    height: 34px;
+    opacity: 0;
+}
