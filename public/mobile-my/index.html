@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
     <div class="lt_container">
         <div class="lt_header">
@@ -23,52 +25,137 @@
             </a>
         </div>
         <div class="lt_content">
-            <div id="slider" class="mui-slider" >
-                <div class="mui-slider-group mui-slider-loop">
-                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
-                    <div class="mui-slider-item mui-slider-item-duplicate">
-                        <a href="#">
-                            <img src="./images/banner4.png">
-                        </a>
+            <!-- 滚动 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <!-- 轮播图 -->
+                    <div id="slider" class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="./images/banner4.png">
+                                </a>
+                            </div>
+                            <!-- 第一张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner1.png">
+                                </a>
+                            </div>
+                            <!-- 第二张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner2.png">
+                                </a>
+                            </div>
+                            <!-- 第三张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner3.png">
+                                </a>
+                            </div>
+                            <!-- 第四张 -->
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="./images/banner4.png">
+                                </a>
+                            </div>
+                            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#">
+                                    <img src="./images/banner1.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator mui-active"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                        </div>
                     </div>
-                    <!-- 第一张 -->
-                    <div class="mui-slider-item">
-                        <a href="#">
-                            <img src="./images/banner1.png">
-                        </a>
+                    <!-- 导航 -->
+                    <div class="lt_nav">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/nav1.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/nav2.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/nav3.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/nav4.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/nav5.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/nav6.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- 第二张 -->
-                    <div class="mui-slider-item">
-                        <a href="#">
-                            <img src="./images/banner2.png">
-                        </a>
+                    <!-- 商品页 -->
+                    <div class="lt_product">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/product.jpg" alt="">
+                                    <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
+                                    <span>￥560.00</span>
+                                    <span>￥660.00</span>
+                                    <input type="button" value="立即购买">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/product.jpg" alt="">
+                                    <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
+                                    <span>￥560.00</span>
+                                    <span>￥660.00</span>
+                                    <input type="button" value="立即购买">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/product.jpg" alt="">
+                                    <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
+                                    <span>￥560.00</span>
+                                    <span>￥660.00</span>
+                                    <input type="button" value="立即购买">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <img src="./images/product.jpg" alt="">
+                                    <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</p>
+                                    <span>￥560.00</span>
+                                    <span>￥660.00</span>
+                                    <input type="button" value="立即购买">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- 第三张 -->
-                    <div class="mui-slider-item">
-                        <a href="#">
-                            <img src="./images/banner3.png">
-                        </a>
-                    </div>
-                    <!-- 第四张 -->
-                    <div class="mui-slider-item">
-                        <a href="#">
-                            <img src="./images/banner4.png">
-                        </a>
-                    </div>
-                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
-                    <div class="mui-slider-item mui-slider-item-duplicate">
-                        <a href="#">
-                            <img src="./images/banner1.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="mui-slider-indicator">
-                    <div class="mui-indicator mui-active"></div>
-                    <div class="mui-indicator"></div>
-                    <div class="mui-indicator"></div>
-                    <div class="mui-indicator"></div>
                 </div>
             </div>
+
+
         </div>
         <div class="lt_footer">
             <ul>
@@ -100,6 +187,7 @@
         </div>
     </div>
 </body>
+
 </html>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>

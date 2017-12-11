@@ -35,7 +35,7 @@ ul,ol{
 /* 内容  */
 .lt_content{
     flex: 1;
-
+    position: relative;
 }
 /* 底部 */
 .lt_footer{
