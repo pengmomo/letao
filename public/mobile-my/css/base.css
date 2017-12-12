@@ -37,6 +37,7 @@ ul,ol{
     flex: 1;
     position: relative;
     overflow: hidden;
+    background-color: white;
 }
 /* 底部 */
 .lt_footer{

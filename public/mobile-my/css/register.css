@@ -1,0 +1,31 @@
+form.register-form{
+   padding: 10px;
+}
+
+form.register-form>div.mui-input-row:nth-child(5){
+    display: flex;
+}
+form.register-form>div.mui-input-row:nth-child(5) input{
+    flex: 1;
+}
+
+form.register-form>div.mui-input-row:nth-child(5) button{
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+form.register-form>div.mui-input-row button{
+    width: 100%;
+    font-size: 18px;
+}
+.form-bottom{
+    font-size: 12px;
+    padding: 15px;
+}
+.form-bottom input{
+    margin-top: 3px;
+}
+.form-bottom span{}
+.form-bottom a{}
