@@ -1,0 +1,71 @@
+.lt_content{
+    background-color: white;
+}
+
+.shop-list{}
+.shop-list ul{
+    padding: 11px 15px;
+}
+.shop-list ul li{
+border-bottom: 1px solid #ccc;
+}
+.shop-list ul li a{
+    display: block;
+}
+.shop-list ul li a .left{
+   float: left;
+   padding: 10px;
+}
+.shop-list ul li a .left img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+.shop-list ul li a .left input{
+    margin-top: 10px;
+    display: block;
+}
+.shop-list ul li a .right{
+    overflow: hidden;
+}
+.shop-list ul li a .right p{
+    color: #333;
+    margin: 0;
+}
+
+.shop-list ul li a .right .size{
+    color: grey;
+}
+.shop-list ul li a .right .body{
+    padding: 8px 0;
+}
+.shop-list ul li a .right span.price{
+    color: red;
+}
+.shop-list ul li a .right span.old-price{
+    color: gray;
+    text-decoration: line-through;
+}
+.shop-list ul li a .right span.num{
+    color: gray;
+}
+
+.lt_order_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+.lt_order_list p{
+    margin: 0;
+    color: red;
+    font-size: 12px;
+}
+.lt_order_list p span{}
+.lt_order_list button{
+    border-radius: 0;
+    width: 80px;
+    height: 30px;
+    background-color: red;
+    font-size: 12px;
+}

@@ -1,0 +1,95 @@
+.search_form{
+    padding: 10px;
+    display: flex;
+    background-color: white;
+}
+.search_form input{
+    flex: 1;
+    height: 34px;
+    border: 1px solid #006699;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 12px;
+    text-align: left;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+.search_form button{
+    width: 60px;
+    height: 34px;
+    background-color: #006699;
+    border-color: #006699;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: white;
+}
+
+.option-list{
+    background-color: #eee;
+}
+.option-list ul{
+
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.option-list ul li{
+    flex: 1;
+    text-align: center;
+}
+.option-list ul li a{
+    font-size: 12px;
+    color: #333;
+}
+.option-list ul li.active a{
+    color: orange;
+}
+
+
+.product{}
+.product ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product ul li {
+    width: 50%;
+    padding: 10px;
+    background-color: white;
+}
+.product ul li a{
+    display: block;
+    width: 100%;
+   box-shadow: 0 0 4px gray;
+   padding: 10px 5px;
+   text-align: center;
+}
+.product ul li a img{
+    display: block;
+    width: 100%;
+}
+.product ul li a p{
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 0px;
+}
+.product ul li a span{
+    font-size: 12px;
+}
+.product ul li a span:first-of-type{
+    color: red;
+}
+.product ul li a span:last-of-type{
+    color: gray;
+    text-decoration: line-through;
+}
+.product ul li a button{
+    width: 80px;
+    height: 30px;
+    background-color: #007aff;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}

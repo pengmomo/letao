@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/car.css">
-
+    <link rel="stylesheet" href="./css/search.css">
 
 </head>
 
@@ -21,37 +20,40 @@
             <a href="javascript:void(0);">
                 <i class="fa fa-chevron-left"></i>
             </a>
-            <h4>购物车</h4>
+            <h4>搜索中心</h4>
             <a href="./search.html">
                 <!-- <i class="fa fa-search"></i> -->
             </a>
         </div>
         <div class="lt_content">
-            <div class="shop-list">
-                <ul>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="left">
-                                <img src="./images/detail.jpg" alt="">
-                                <input type="checkbox">
-                            </div>
-                            <div class="right">
-                                <p>匡威三星标1970s converse复刻三星标黑色高帮黑色高帮黑色高帮黑色高帮</p>
-                                <p class="body mui-clearfix">
-                                    <span class="price mui-pull-left">￥499.1</span>
-                                    <span class="old-price mui-pull-left">￥499.1</span>
-                                    <span class="num mui-pull-right">一双</span>
-                                </p>
-                                <p class="size">鞋码&nbsp;:&nbsp;50</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+            <div class="search">
+                <form class="search_form" action="./search_list.html">
+                    <input type="search" placeholder="请输入搜索关键字">
+                    <button>搜索</button>
+                </form>
+
+                <div class="search-history">
+                    <span>搜索历史</span>
+                    <span>
+                        <i class="fa fa-trash"></i>清空记录</span>
+                </div>
+                <div class="history-list">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">123123</a>
+                            <span class="fa fa-close"></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">123123</a>
+                            <span class="fa fa-close"></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">123123</a>
+                            <span class="fa fa-close"></span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="lt_order_list">
-            <p>订单总金额：<span>￥00:00</span></p>
-            <button class="mui-btn mui-btn-danger">生成订单</button>
         </div>
         <div class="lt_footer">
             <ul>
@@ -67,7 +69,7 @@
                         <p>分类</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./car.html">
                         <i class="fa fa-shopping-cart"></i>
                         <p>购物车</p>
@@ -86,4 +88,4 @@
 
 </html>
 <script src="./lib/mui/js/mui.min.js"></script>
-<script src="./js/common.js"></script> 
+<script src="./js/common.js"></script>
