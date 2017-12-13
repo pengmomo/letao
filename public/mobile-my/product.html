@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!-- 导入字体图标 -->
@@ -18,11 +18,11 @@
     <div class="lt_container">
         <div class="lt_header">
             <a href="javascript:void(0);">
-                <i class="fa fa-chevron-left"></i>
+                <span class="fa fa-chevron-left"></span>
             </a>
             <h4>商品详情</h4>
             <a href="javascript:void(0);">
-                <i class="fa fa-refresh"></i>
+                <span class="fa fa-refresh"></span>
             </a>
         </div>
         <div class="lt_content">
@@ -116,7 +116,8 @@
                                     <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
                                 </div>
 
-                                <span class="count">剩余数量：<i>20</i>双</span>
+                                <span class="count">剩余数量：
+                                    <i>20</i>双</span>
                             </li>
                             <li>
                                 <span>详情：</span>
@@ -140,6 +141,6 @@
 </body>
 
 </html>
+<script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/index.js"></script>

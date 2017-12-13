@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!-- 导入字体图标 -->
@@ -18,76 +18,96 @@
     <div class="lt_container">
         <div class="lt_header">
             <a href="javascript:void(0);">
-                <i class="fa fa-chevron-left"></i>
+                <span class="fa fa-chevron-left"></span>
             </a>
             <h4>商品列表</h4>
             <a href="./search.html">
-                <!-- <i class="fa fa-search"></i> -->
+                <span class="fa fa-search"></span>
             </a>
         </div>
         <div class="lt_content">
-            <div class="search">
-                <form class="search_form" action="./search_list.html">
-                    <input type="search" placeholder="请输入搜索关键字">
-                    <button>搜索</button>
-                </form>
-            </div>
-            <div class="option-list">
-                <ul>
-                    <li class="active"><a href="javasctipt:void(0);">上架时间<span class="fa fa-angle-down"></span></a></li>
-                    <li><a href="javasctipt:void(0);">价格<span class="fa fa-angle-down"></span></a></li>
-                    <li><a href="javasctipt:void(0);">库存<span class="fa fa-angle-down"></span></a></li>
-                    <li><a href="javasctipt:void(0);">折扣<span class="fa fa-angle-down"></span></a></li>
-                </ul>
-            </div>
-            <div class="product">
-                <ul>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="./images/detail.jpg" alt="">
-                            <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                            <span>￥499.1</span>
-                            <span>￥500</span>
-                            <button>立即购买</button>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="./images/detail.jpg" alt="">
-                            <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                            <span>￥499.1</span>
-                            <span>￥500</span>
-                            <button>立即购买</button>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="./images/detail.jpg" alt="">
-                            <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                            <span>￥499.1</span>
-                            <span>￥500</span>
-                            <button>立即购买</button>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="./images/detail.jpg" alt="">
-                            <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                            <span>￥499.1</span>
-                            <span>￥500</span>
-                            <button>立即购买</button>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img src="./images/detail.jpg" alt="">
-                            <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                            <span>￥499.1</span>
-                            <span>￥500</span>
-                            <button>立即购买</button>
-                        </a>
-                    </li>
-                </ul>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="search">
+                        <form class="search_form" action="./search_list.html">
+                            <input type="search" placeholder="请输入搜索关键字">
+                            <button>搜索</button>
+                        </form>
+                    </div>
+                    <div class="option-list">
+                        <ul>
+                            <li class="active">
+                                <a href="javasctipt:void(0);">上架时间
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javasctipt:void(0);">价格
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javasctipt:void(0);">库存
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javasctipt:void(0);">折扣
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="./images/detail.jpg" alt="">
+                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
+                                    <span>￥499.1</span>
+                                    <span>￥500</span>
+                                    <button>立即购买</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="./images/detail.jpg" alt="">
+                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
+                                    <span>￥499.1</span>
+                                    <span>￥500</span>
+                                    <button>立即购买</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="./images/detail.jpg" alt="">
+                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
+                                    <span>￥499.1</span>
+                                    <span>￥500</span>
+                                    <button>立即购买</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="./images/detail.jpg" alt="">
+                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
+                                    <span>￥499.1</span>
+                                    <span>￥500</span>
+                                    <button>立即购买</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="./images/detail.jpg" alt="">
+                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
+                                    <span>￥499.1</span>
+                                    <span>￥500</span>
+                                    <button>立即购买</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="lt_footer">
@@ -122,5 +142,6 @@
 </body>
 
 </html>
+<script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>
