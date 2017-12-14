@@ -143,4 +143,72 @@
 </html>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script id="productTmp" type="text/html">
+    <div id="slider" class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="{{pic[pic.length-1].picAddr}}">
+                </a>
+            </div>
+            {{each pic}}
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="{{$value.picAddr}}">
+                </a>
+            </div>
+            {{/each}}
+            <!-- 第二张 -->
+
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="{{pic[0].picAddr}}">
+                </a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            {{each pic}}
+            <div class="mui-indicator"></div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="product_detail">
+        <ul>
+            <li>
+                <p>{{proName}}</p>
+            </li>
+            <li>
+                <span>价格：</span>
+                <span class="price">￥{{price}}</span>
+                <span class="old-price">￥{{oldPrice}}</span>
+            </li>
+            <li class="list-size">
+                <span>尺码：</span>
+               
+            </li>
+            <li>
+                <span>库存：</span>
+                <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{num}}'>
+                    <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                    <input class="mui-numbox-input" type="number" />
+                    <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                </div>
+
+                <span class="count">剩余数量：
+                    <i>{{num}}</i>双</span>
+            </li>
+            <li>
+                <span>详情：</span>
+                <span>{{proDesc}}</span>
+            </li>
+        </ul>
+    </div>
+
+</script>
 <script src="./js/common.js"></script>
+<script src="./js/product.js"></script>

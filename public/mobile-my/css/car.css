@@ -4,7 +4,7 @@
 
 .shop-list{}
 .shop-list ul{
-    padding: 11px 15px;
+  
 }
 .shop-list ul li{
 border-bottom: 1px solid #ccc;
@@ -69,3 +69,4 @@ border-bottom: 1px solid #ccc;
     background-color: red;
     font-size: 12px;
 }
+

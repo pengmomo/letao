@@ -27,36 +27,16 @@
             </a>
         </div>
         <div class="lt_content">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <div class="shop-list">
-                        <ul>
-                            <li>
-                                <a class="mui-clearfix" href="javascript:void(0)">
-                                    <div class="left">
-                                        <img src="./images/detail.jpg" alt="">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="right">
-                                        <p>匡威三星标1970s converse复刻三星标黑色高帮黑色高帮黑色高帮黑色高帮</p>
-                                        <p class="body mui-clearfix">
-                                            <span class="price mui-pull-left">￥499.1</span>
-                                            <span class="old-price mui-pull-left">￥499.1</span>
-                                            <span class="num mui-pull-right">一双</span>
-                                        </p>
-                                        <p class="size">鞋码&nbsp;:&nbsp;50</p>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
+            <div class="shop-list">
+                <ul id="OA_task_2" class="shop-car-list mui-table-view">
+                    
+                </ul>
             </div>
         </div>
+
         <div class="lt_order_list">
             <p>订单总金额：
-                <span>￥00:00</span>
+                <span>￥<i>00.00</i></span>
             </p>
             <button class="mui-btn mui-btn-danger">生成订单</button>
         </div>
@@ -94,4 +74,36 @@
 </html>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script type="text/html" id="car">
+    {{each }}
+    <li class="mui-table-view-cell mui-transitioning">
+        <div class="mui-slider-right mui-disabled">
+            <a class="mui-btn mui-btn-red">
+                <span data-id={{$value.id}} style="font-size:35px;" class="fa fa-trash-o"></span>
+            </a>
+        </div>
+        <div class="mui-slider-handle mui-table">
+            <div class="mui-table-cell">
+                <a class="mui-clearfix" href="javascript:void(0)">
+                    <div class="left">
+                        <img src="{{$value.pic[0].picAddr}}" alt="">
+                        <input type="checkbox">
+                    </div>
+                    <div class="right">
+                        <p>{{$value.proName}}</p>
+                        <p class="body mui-clearfix">
+                            <span class="price mui-pull-left">￥<i>{{$value.price}}</i></span>
+                            <span class="old-price mui-pull-left">￥<i>{{$value.oldPrice}}</i></span>
+                            <span class="num mui-pull-right">{{$value.num}}双</span>
+                        </p>
+                        <p class="size">鞋码&nbsp;:&nbsp;{{$value.size}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+{{/each}}
+</script>
 <script src="./js/common.js"></script>
+<script src="./js/car.js"></script>

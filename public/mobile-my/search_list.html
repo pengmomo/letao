@@ -37,22 +37,22 @@
                     <div class="option-list">
                         <ul>
                             <li class="active">
-                                <a href="javasctipt:void(0);">上架时间
+                                <a href="javascript:void(0);">上架时间
                                     <span class="fa fa-angle-down"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javasctipt:void(0);">价格
+                                <a class="price-option" href="javascript:void(0);">价格
                                     <span class="fa fa-angle-down"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javasctipt:void(0);">库存
+                                <a class="num-option" href="javascript:void(0);">库存
                                     <span class="fa fa-angle-down"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javasctipt:void(0);">折扣
+                                <a href="javascript:void(0);">折扣
                                     <span class="fa fa-angle-down"></span>
                                 </a>
                             </li>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="product">
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <a href="javascript:void(0)">
                                     <img src="./images/detail.jpg" alt="">
                                     <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
@@ -68,43 +68,7 @@
                                     <span>￥500</span>
                                     <button>立即购买</button>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="./images/detail.jpg" alt="">
-                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                                    <span>￥499.1</span>
-                                    <span>￥500</span>
-                                    <button>立即购买</button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="./images/detail.jpg" alt="">
-                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                                    <span>￥499.1</span>
-                                    <span>￥500</span>
-                                    <button>立即购买</button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="./images/detail.jpg" alt="">
-                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                                    <span>￥499.1</span>
-                                    <span>￥500</span>
-                                    <button>立即购买</button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="./images/detail.jpg" alt="">
-                                    <p>指南针运动 NIKE HYPERSHIFT篮球鞋 844392-010-607-164-017现货</p>
-                                    <span>￥499.1</span>
-                                    <span>￥500</span>
-                                    <button>立即购买</button>
-                                </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -144,4 +108,23 @@
 </html>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script type="text/html" id="search">
+    {{each data}}
+    <li>
+        <a href="javascript:void(0)">
+            {{if $value.pic.length==0 }}
+            <img src="./images/none.png" alt=""> 
+            {{else}}
+            <img src="{{$value.pic[0].picAddr}}" alt=""> 
+            {{/if}}
+            <p>{{$value.proName}}</p>
+            <span>￥{{$value.price}}</span>
+            <span>￥{{$value.oldPrice}}</span>
+            <button data-id="{{$value.id}}">立即购买</button>
+        </a>
+    </li>
+    {{/each}}
+</script>
 <script src="./js/common.js"></script>
+<script src="./js/search_list.js"></script>

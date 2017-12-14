@@ -28,7 +28,7 @@
         <div class="lt_content">
             <div class="search">
                 <form class="search_form" action="./search_list.html">
-                    <input type="search" placeholder="请输入搜索关键字">
+                    <input name="key" type="search" placeholder="请输入搜索关键字">
                     <button>搜索</button>
                 </form>
 
@@ -90,4 +90,14 @@
 
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script type="text/html" id="searchTmp">
+    {{each}}
+    <li>
+        <a href="javascript:void(0);">{{$value}}</a>
+        <span class="fa fa-close"></span>
+    </li>
+    {{/each}}
+</script>
 <script src="./js/common.js"></script>
+<script src="./js/search.js"></script>
